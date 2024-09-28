@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="title">Rock Paper Scissors</p>
+
+        <div class="button-img">
+            <button class="move-btn" onclick="playGame('rock')">
+                <img src="img/rock.png"  class="move-icon">
+            </button>
+        
+            <button class="move-btn" onclick="playGame('paper')">
+                <img src="img/paper.png"  class="move-icon">
+            </button>
+        
+            <button class="move-btn" onclick="playGame('scissors')">
+                <img src="img/scissors.png"  class="move-icon">
+            </button>
+        </div>
+
+        
+    
+        <div>
+            <p class="js-result result"></p>
+            <p class="js-move">
+                You
+                <img src="img/rock.png"  class="move-icon">
+                <img src="img/scissors.png"  class="move-icon">
+                Computer
+            </p>
+            <p class="js-score score"></p>
+        </div>
+    
+        <div>
+            <button class="reset-btn" onclick="
+            score.wins = 0;
+            score.losses = 0;
+            score.ties = 0;
+            localStorage.removeItem('score'); update()">Reset Score</button>
+        
+            <button class="auto-btn" onclick="autoPlay()">Auto Play</button>
+        </div>
+    </div>
+
+
+    <script src="rock.js"></script>
+</body>
+</html>

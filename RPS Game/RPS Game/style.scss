@@ -1,0 +1,253 @@
+
+$font-family:sans-serif;
+$primary-color:white;
+$btnColor:white;
+$bg-color:#000;
+$fontSize:13px;
+$fontHeading:30px;
+$font-result:22px;
+$font-score:medium;
+$font-js-move:medium;
+
+@mixin rpsImg($w:60px,$h:60px,$p:10px) {
+    width: $w;
+    height: $h;
+    padding: $p;
+    object-fit: fill;
+    background: transparent;
+    
+}
+
+@mixin width-height($w:50px,$h:50px,$ml:10px){
+    width: $w;
+    height: $h;
+    margin-left: $ml;
+}
+
+@mixin button($bg-color:none,$br-clr:white,$padding:8px 10px,$r:5px,$bw:1px) {
+    background-color: $bg-color;
+    border-color: $br-clr;
+    border-radius: $r;
+    border-width: $bw;
+    padding: $padding;
+    cursor: pointer;
+    align-items: center;
+    vertical-align: middle;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $fontSize;
+    color: $primary-color;
+    background-color: $bg-color;
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .title{
+            font-size: $fontHeading;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+        .button-img{
+           background: transparent;
+            .move-btn{
+                margin-left: 5px;
+                background: transparent;
+                @include button(transparent,white,8px 8px,60px,3px);
+              
+                .move-icon{
+                    @include rpsImg(60px,60px,10px)
+
+                }
+            }
+        
+        }
+        div {
+            .result{
+                font-size: $font-result;
+                font-weight: bold;
+            }
+            .js-move{
+                font-size: $font-js-move;
+
+                .move-icon{
+                    margin-left: 5px;
+                    @include rpsImg(60px,60px,10px)
+                }
+                .score{
+                    font-size: $font-score;
+                }
+
+            }
+        }
+        div{
+            color: $primary-color;
+            font-size: medium;
+            
+            
+            .reset-btn{
+                @include button();
+                @include width-height(100px, 40px,5px);
+
+            }
+            .auto-btn{
+                @include button();
+                @include width-height(100px, 40px,0);
+
+
+            }
+        }
+    }
+}
+
+//media query
+
+@media (min-width:300px) and (max-width:400px) {
+    body{
+        $fontHeading:18px;
+        $font-result:15px;
+        $font-score:12px;
+        $font-js-move:small;
+        .container{
+            top: 30%;
+            .title{
+                font-size: $fontHeading
+            }
+            .button-img{
+                .move-btn{
+                   margin-left: 5px;
+                    @include button(transparent,white,5px 5px,60px,2px);
+                  
+                    .move-icon{
+                        @include rpsImg(25px,25px,2px)
+    
+                    }
+                }
+            }
+            div{
+                .result{
+                    font-size: $font-result;
+                    font-weight: bold;
+                }
+                .js-move{
+                    font-size: $font-js-move;
+    
+                    .move-icon{
+
+                        @include rpsImg(25px,25px,2px)
+                    }
+                    .score{
+                        font-size: $font-score;
+                    }
+    
+                }
+            }
+            div{
+                .reset-btn{
+                   
+                    @include width-height(60px, 40px);
+                }
+                .auto-btn{
+                    
+                    @include width-height(60px, 40px);
+    
+                }
+            }
+
+        }
+
+    }
+    
+}
+@media (min-width:400px) and (max-width:700px) {
+    body{
+        $fontHeading:22px;
+        $font-result:18px;
+        $font-score:13px;
+        $font-js-move:14px;
+
+        .container{
+            top: 40%;
+            .title{
+                font-size: $fontHeading
+            }
+            .button-img{
+                .move-btn{
+                    @include button(transparent,white,3px 3px,60px,3px);
+                  
+                    .move-icon{
+                        @include rpsImg(30px,30px)
+    
+                    }
+                }
+            }
+
+            div{
+                .result{
+                    font-size: $font-result;
+                    font-weight: bold;
+                }
+                .js-move{
+                    font-size: $font-js-move;
+    
+                    .move-icon{
+    
+                        @include rpsImg(30px,30px)
+                    }
+                    .score{
+                        font-size: $font-score;
+                    }
+    
+                }
+            }
+            div{
+                .reset-btn{
+              
+                    @include width-height(80px, 40px);
+                }
+                .auto-btn{
+                    
+                    @include width-height(80px, 40px);
+    
+                }
+            }
+
+        }
+
+    }
+    
+}
+
+@media (min-width:700px) and (max-width:1330px) {
+    body{
+        
+        .container{
+            .title{
+                font-size: $fontHeading
+            }
+            .button-img{
+                .move-btn{                       
+                    .move-icon{
+                        @include rpsImg(60px,60px)
+    
+                    }
+                }
+            }
+
+            div{
+                .reset-btn{
+                    @include width-height(100px, 40px);
+                }
+                .auto-btn{
+                    @include width-height(100px, 40px);
+    
+                }
+            }
+
+        }
+
+    }
+    
+}
