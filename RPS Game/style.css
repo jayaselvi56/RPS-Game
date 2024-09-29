@@ -1,0 +1,222 @@
+body {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: white;
+  background-color: #000;
+}
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .container .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+body .container .button-img {
+  background: transparent;
+}
+body .container .button-img .move-btn {
+  margin-left: 5px;
+  background: transparent;
+  background-color: transparent;
+  border-color: white;
+  border-radius: 60px;
+  border-width: 3px;
+  padding: 8px 8px;
+  cursor: pointer;
+  align-items: center;
+  vertical-align: middle;
+}
+body .container .button-img .move-btn .move-icon {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  background: transparent;
+}
+body .container div .result {
+  font-size: 22px;
+  font-weight: bold;
+}
+body .container div .js-move {
+  font-size: medium;
+}
+body .container div .js-move .move-icon {
+  margin-left: 5px;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  background: transparent;
+}
+body .container div .js-move .score {
+  font-size: medium;
+}
+body .container div {
+  color: white;
+  font-size: medium;
+}
+body .container div .reset-btn {
+  background-color: none;
+  border-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 8px 10px;
+  cursor: pointer;
+  align-items: center;
+  vertical-align: middle;
+  width: 100px;
+  height: 40px;
+  margin-left: 5px;
+}
+body .container div .auto-btn {
+  background-color: none;
+  border-color: white;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 8px 10px;
+  cursor: pointer;
+  align-items: center;
+  vertical-align: middle;
+  width: 100px;
+  height: 40px;
+  margin-left: 0;
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  body .container {
+    top: 30%;
+  }
+  body .container .title {
+    font-size: 18px;
+  }
+  body .container .button-img .move-btn {
+    margin-left: 5px;
+    background-color: transparent;
+    border-color: white;
+    border-radius: 60px;
+    border-width: 2px;
+    padding: 5px 5px;
+    cursor: pointer;
+    align-items: center;
+    vertical-align: middle;
+  }
+  body .container .button-img .move-btn .move-icon {
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    background: transparent;
+  }
+  body .container div .result {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  body .container div .js-move {
+    font-size: small;
+  }
+  body .container div .js-move .move-icon {
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    background: transparent;
+  }
+  body .container div .js-move .score {
+    font-size: 12px;
+  }
+  body .container div .reset-btn {
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  body .container div .auto-btn {
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 400px) and (max-width: 700px) {
+  body .container {
+    top: 40%;
+  }
+  body .container .title {
+    font-size: 22px;
+  }
+  body .container .button-img .move-btn {
+    background-color: transparent;
+    border-color: white;
+    border-radius: 60px;
+    border-width: 3px;
+    padding: 3px 3px;
+    cursor: pointer;
+    align-items: center;
+    vertical-align: middle;
+  }
+  body .container .button-img .move-btn .move-icon {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    background: transparent;
+  }
+  body .container div .result {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  body .container div .js-move {
+    font-size: 14px;
+  }
+  body .container div .js-move .move-icon {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    background: transparent;
+  }
+  body .container div .js-move .score {
+    font-size: 13px;
+  }
+  body .container div .reset-btn {
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  body .container div .auto-btn {
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1330px) {
+  body .container .title {
+    font-size: 30px;
+  }
+  body .container .button-img .move-btn .move-icon {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    -o-object-fit: fill;
+       object-fit: fill;
+    background: transparent;
+  }
+  body .container div .reset-btn {
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  body .container div .auto-btn {
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
